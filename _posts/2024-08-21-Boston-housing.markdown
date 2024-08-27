@@ -26,7 +26,7 @@ from sklearn.cluster import KMeans
 Start by exploring the Boston Housing dataset.  
 Brought the dataset from Kaggle  
 
-[Kaggle]("https://www.kaggle.com/datasets/zedekiaobuya/housingdatacsv")  
+[Kaggle](https://www.kaggle.com/datasets/zedekiaobuya/housingdatacsv)  
 ```python
 ds = pd.read_csv("HousingData.csv")
 ds.head()
