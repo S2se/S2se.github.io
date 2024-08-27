@@ -4,5 +4,4 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+This is [New_Resume.docx.pdf](https://github.com/user-attachments/files/16760501/New_Resume.docx.pdf)

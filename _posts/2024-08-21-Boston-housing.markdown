@@ -3,6 +3,7 @@ layout: post
 title:  "[Project] Analysis of Boston housing dataset"
 date:   2024-08-21 21:03:36 +0900
 categories: Python
+
 ---
 
 ## Description  
@@ -23,16 +24,15 @@ from sklearn.cluster import KMeans
 
 ## Explore the data
 Start by exploring the Boston Housing dataset.  
-Brought the dataset from Kaggle  
+Brought the dataset from Kaggle
 
-[Kaggle] ("https://www.kaggle.com/datasets/zedekiaobuya/housingdatacsv")  
-
+[Kaggle]("https://www.kaggle.com/datasets/zedekiaobuya/housingdatacsv")  
 ```python
 ds = pd.read_csv("HousingData.csv")
 ds.head()
 # Examine the top 5 rows.
 ```
-![dataset](https://github.com/user-attachments/assets/74ccbdf3-ac94-47a8-9a69-30bcf7b4d388)  
+![dataset](https://github.com/user-attachments/assets/42f9529e-8a6f-4112-873b-3b77e0cc7a54)
 
 
 These are the codes for exploring the loaded data.  
@@ -62,7 +62,7 @@ row: 506 / column: 14
 ```python
 ds.isna().sum()
 ```
-![nullcheck](https://github.com/user-attachments/assets/b288bb48-951f-4e94-acc5-2a331e15ff59)  
+![nullcheck](https://github.com/user-attachments/assets/b43a2c9a-3037-4527-93ff-6a95f04673e5)
 ```python
 ds['CRIM'].fillna(ds['CRIM'].mean(), inplace=True)
 ds['ZN'].fillna(ds['ZN'].mean(), inplace=True)
@@ -94,7 +94,7 @@ for i, column in enumerate(ds.columns):
 plt.tight_layout()
 plt.show()
 ```  
-![visu1](https://github.com/user-attachments/assets/df7a59fc-f87f-400a-a683-795c72a4a7df)  
+![visu1](https://github.com/user-attachments/assets/b1fbb916-1e32-495f-b67e-72d866c334d8)
 
 ```python
 fig, ax = plt.subplots(nrows=2, ncols=7, figsize=(20, 8))
@@ -107,8 +107,8 @@ for i, column in enumerate(ds.columns):
 plt.tight_layout()
 plt.show()
 ```  
-![visu2](https://github.com/user-attachments/assets/a958bac2-4904-4d04-a341-f6a2baa763e2)  
-<br/><br/>
+![visu2](https://github.com/user-attachments/assets/faf4be7a-056a-4c11-a6cc-a51c1c7b11c0)
+
   
 1. Remove the dependenct variable: MEDA
 2. Remove Categorical Feature: RAD  
@@ -129,7 +129,7 @@ sns.heatmap(correlation_matrix, annot=True, cmap='RdYlBu_r', center=0, mask=mask
 plt.show()
 ```  
 
-![correlation](https://github.com/user-attachments/assets/e4dffd47-8c13-4bbd-b9df-a34b02362b56)  
+![correlation](https://github.com/user-attachments/assets/039d2ee1-c4e0-495d-bcdd-56535839d1ea)  
 
 1. The highest value is RAD and TAX.( 0.91)  
 2. With MEDV, RM and LSTAT is highly correlated.  
@@ -144,11 +144,8 @@ plt.show()
 ```python 
 sns.regplot(y=ds["RAD"], x=ds["TAX"])
 ```  
-![RadnTax](https://github.com/user-attachments/assets/e07cc79a-79a0-47e3-b617-0d168e342a90)  
+![RadnTax](https://github.com/user-attachments/assets/801651ae-5f6c-469c-a8fe-b73d1463c194)
 <br/><br/>
-<br/><br/>
-
-
 
 ## Linear Regression
 ```python 
@@ -212,7 +209,7 @@ plt.ylabel("Predicted Price")
 plt.title("LINEAR REGRESSION")
 plt.show()
 ```  
-![regression](https://github.com/user-attachments/assets/f8272d55-f298-49fa-850d-0120a8c8eb1b)  
+![regression](https://github.com/user-attachments/assets/4db60e76-dee3-4134-9d01-f1bf3bb2d8cf)  
 
 
 
