@@ -22,9 +22,6 @@ order: 4
 </div>
 
 
-<img src="https://url/image.png" width="50" height="50"/>
-
-
 If you're curious about me, please refer to this resume.  
 
 [<img src = "https://github.com/user-attachments/assets/03ce1880-2188-4c1f-8ef6-8f02dd4b9618" width= "30" alt ="resume">](https://github.com/user-attachments/files/16760501/New_Resume.docx.pdf)
