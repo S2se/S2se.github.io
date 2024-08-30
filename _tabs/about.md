@@ -27,9 +27,5 @@ order: 4
 
 If you're curious about me, please refer to this resume.  
 
-<a href="https://github.com/user-attachments/files/16760501/New_Resume.docx.pdf">
-    <img src="https://github.com/user-attachments/assets/03ce1880-2188-4c1f-8ef6-8f02dd4b9618" alt="Resume" width="300"/>
-</a>
-<a href="https://www.linkedin.com/in/sangeun-lee-28ba012a1/">
-    <img src="https://github.com/user-attachments/assets/4354513a-8221-4b97-9f54-0c49446d45ac" alt="Lnk" width="300"/>
-</a>
+[<img src = "https://github.com/user-attachments/assets/03ce1880-2188-4c1f-8ef6-8f02dd4b9618" width= "30" alt ="resume">](https://github.com/user-attachments/files/16760501/New_Resume.docx.pdf)
+[<img src = "https://github.com/user-attachments/assets/4354513a-8221-4b97-9f54-0c49446d45ac" width= "30" alt="lnk"](https://www.linkedin.com/in/sangeun-lee-28ba012a1/)
