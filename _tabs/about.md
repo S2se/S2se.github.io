@@ -4,8 +4,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-## Hi, there. This is Lauren
-**Data Scientist / Data Analyst**
+## Hi, Everyone. This is Lauren.
+Hello, everyone! Thank you for visiting my page. I feel very fortunate to have found what I want to do and to be passionate about it. I'm capturing my growth journey on this blog. If you're curious about my future endeavors, let's have a conversation!
 
 ### Skills  
 <div style="display: flex; flex-wrap: wrap;">
@@ -22,7 +22,6 @@ order: 4
 </div>
 
 
-If you're curious about me, please refer to this resume.  
-
+## Contacting me here
 [<img src = "https://github.com/user-attachments/assets/03ce1880-2188-4c1f-8ef6-8f02dd4b9618" width= "30" alt ="resume">](https://github.com/user-attachments/files/16760501/New_Resume.docx.pdf)
 [<img src = "https://github.com/user-attachments/assets/4354513a-8221-4b97-9f54-0c49446d45ac" width= "30" alt="lnk"](https://www.linkedin.com/in/sangeun-lee-28ba012a1/)
