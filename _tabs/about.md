@@ -24,4 +24,5 @@ order: 4
 
 
 
-This is [Resume](https://github.com/user-attachments/files/16760501/New_Resume.docx.pdf). If you have some interest in 
+If you're curious about me, please refer to this resume.  
+[![Resume](https://github.com/user-attachments/assets/03ce1880-2188-4c1f-8ef6-8f02dd4b9618)](https://github.com/user-attachments/files/16760501/New_Resume.docx.pdf). 
