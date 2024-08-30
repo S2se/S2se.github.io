@@ -7,12 +7,12 @@ order: 4
 ## Hi, there. This is Lauren
 **Data Scientist / Data Analyst**
 
-### Skills
+### Skills  
 <img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white" alt="python"/>
-<img src="https://img.shields.io/badge/r-276DC3?style=flat-square&logo=Python&logoColor=white" alt="R"/>
-<img src="https://img.shields.io/badge/mysql-4479A1?style=flat-square&logo=Python&logoColor=white" alt="mysql"/>
-<img src="https://img.shields.io/badge/postgresql-4169E1?style=flat-square&logo=Python&logoColor=white" alt="postgre"/>
-<img src="https://img.shields.io/badge/jupyter-F37626?style=flat-square&logo=Python&logoColor=white" alt="jupyter"/>
+<img src="https://img.shields.io/badge/r-276DC3?style=flat-square&logo=r&logoColor=white" alt="R"/>
+<img src="https://img.shields.io/badge/mysql-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="mysql"/>
+<img src="https://img.shields.io/badge/postgresql-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="postgre"/>
+<img src="https://img.shields.io/badge/jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="jupyter"/>
 
 
 
