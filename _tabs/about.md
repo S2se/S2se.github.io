@@ -24,14 +24,9 @@ Hello, everyone! Thank you for visiting my page. I feel very fortunate to have f
 
 ## Contacting me here
 <div style="display: flex; flex-wrap: wrap;">
-    <a href="https://github.com/user-attachments/files/16760501/New_Resume.docx.pdf">
-        <img src="https://github.com/user-attachments/assets/03ce1880-2188-4c1f-8ef6-8f02dd4b9618" width="180" alt="resume" style="margin: 10px; display: block;">
-    </a>
-    <a href="https://www.linkedin.com/in/sangeun-lee-28ba012a1/">
-        <img src="https://github.com/user-attachments/assets/4354513a-8221-4b97-9f54-0c49446d45ac" width="180" alt="lnk" style="margin: 10px; display: block;">
-    </a>
-    <a href="mailto:shangeuny@gmail.com">
-        <img src="https://github.com/user-attachments/assets/7c1de909-8537-4e46-ba0e-4e59807c36e5" width="180" alt="mail" style="margin: 10px; display: block;">
+        <img src="https://github.com/user-attachments/assets/03ce1880-2188-4c1f-8ef6-8f02dd4b9618" width="180" alt="resume" style="margin: 10px; display: block;">("https://github.com/user-attachments/files/16760501/)
+        <img src="https://github.com/user-attachments/assets/4354513a-8221-4b97-9f54-0c49446d45ac" width="180" alt="lnk" style="margin: 10px; display: block;">("https://www.linkedin.com/in/sangeun-lee-28ba012a1/")
+    <a href="mailto:shangeuny@gmail.com"><img src="https://github.com/user-attachments/assets/7c1de909-8537-4e46-ba0e-4e59807c36e5" width="180" alt="mail" style="margin: 10px; display: block;">
     </a>
 </div>
 
