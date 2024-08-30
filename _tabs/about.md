@@ -12,6 +12,8 @@ order: 4
 <img src="https://img.shields.io/badge/r-276DC3?style=flat-square&logo=Python&logoColor=white" alt="R"/>
 <img src="https://img.shields.io/badge/mysql-4479A1?style=flat-square&logo=Python&logoColor=white" alt="mysql"/>
 <img src="https://img.shields.io/badge/postgresql-4169E1?style=flat-square&logo=Python&logoColor=white" alt="postgre"/>
+<img src="https://img.shields.io/badge/jupyter-F37626?style=flat-square&logo=Python&logoColor=white" alt="jupyter"/>
+
 
 
 This is [Resume](https://github.com/user-attachments/files/16760501/New_Resume.docx.pdf). If you have some interest in 
