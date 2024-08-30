@@ -25,4 +25,6 @@ order: 4
 
 
 If you're curious about me, please refer to this resume.  
+
 [![Resume](https://github.com/user-attachments/assets/03ce1880-2188-4c1f-8ef6-8f02dd4b9618)](https://github.com/user-attachments/files/16760501/New_Resume.docx.pdf). 
+[![Lnk](https://github.com/user-attachments/assets/4354513a-8221-4b97-9f54-0c49446d45ac)](https://www.linkedin.com/in/sangeun-lee-28ba012a1/)
