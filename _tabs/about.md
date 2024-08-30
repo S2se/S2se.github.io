@@ -8,6 +8,10 @@ order: 4
 **Data Scientist / Data Analyst**
 
 ### Skills
-<img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white" alt="python"/>
+<img src="https://img.shields.io/badge/r-276DC3?style=flat-square&logo=Python&logoColor=white" alt="R"/>
+<img src="https://img.shields.io/badge/mysql-4479A1?style=flat-square&logo=Python&logoColor=white" alt="mysql"/>
+<img src="https://img.shields.io/badge/postgresql-4169E1?style=flat-square&logo=Python&logoColor=white" alt="postgre"/>
+
 
 This is [Resume](https://github.com/user-attachments/files/16760501/New_Resume.docx.pdf). If you have some interest in 
