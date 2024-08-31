@@ -23,10 +23,21 @@ categories: Python
 ## Approach2 : Identifying the tools to be used.  
 1. imap_tools
 2. Spacy
-3. postgresql
+3. postgresql  
+
+First of all, make the **account.py** file. Should be your email account.  
+Password should be app password.
 
 ```python
-
+Email_address = "youremail@gmail.com"
+Email_password = "password"
 ```
+Get the mail
 
+```python
+from imap_tools import MailBox
+from account import *
 
+mailbox =MailBox("imap.gmail.com", 993)
+mailbox.login(Email_address, Email_password, initial_folder= "INBOX")
+```
