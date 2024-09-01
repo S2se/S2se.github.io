@@ -17,7 +17,7 @@ categories: Python
 
 | Email                                                    | whirlpool Forum                                                                    |
 |----------------------------------------------------------|------------------------------------------------------------------------------------|
-| It is semi-structured, and the content is unpredictable. | Forum where customers discuss customer services. Similarly, there is no structure. |  
+| It is semi-structured, and the content is unpredictable. | Forum where customers discuss customer services.  Similarly, there is no structure. |  
 
 
 ## Approach2 : Identifying the tools to be used.  
