@@ -23,10 +23,12 @@ Hello, everyone! Thank you for visiting my page. I feel very fortunate to have f
 
 
 ## Contacting me here
-[![resume](https://github.com/user-attachments/assets/03ce1880-2188-4c1f-8ef6-8f02dd4b9618)](https://github.com/user-attachments/files/16760501/)
-[![lnk](https://github.com/user-attachments/assets/4354513a-8221-4b97-9f54-0c49446d45ac)](https://www.linkedin.com/in/sangeun-lee-28ba012a1/)
-<a href="mailto:shangeuny@gmail.com" style="margin: 10px; display: block;"><img src="https://github.com/user-attachments/assets/7c1de909-8537-4e46-ba0e-4e59807c36e5" width="180" alt="mail" style="display: block;">
+[![resume](https://github.com/user-attachments/assets/03ce1880-2188-4c1f-8ef6-8f02dd4b9618){: width="200" height="200"}(https://github.com/user-attachments/files/16760501/)
+[![lnk](https://github.com/user-attachments/assets/4354513a-8221-4b97-9f54-0c49446d45ac)]{: width="200" height="200"}(https://www.linkedin.com/in/sangeun-lee-28ba012a1/)
+<a href="mailto:shangeuny@gmail.com" style="margin: 10px; display: block;">
+    <img src="https://github.com/user-attachments/assets/7c1de909-8537-4e46-ba0e-4e59807c36e5" width="180" alt="mail" style="display: block;">
 </a>
+
 
 
 
