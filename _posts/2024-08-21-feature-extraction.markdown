@@ -59,9 +59,19 @@ for msg in mailbox.fetch(limit=20, reverse=True):
 
     sample_email= sample_email.append(raw_data, ignore_index =True)
   
-sample_email.to_excel('sample.xlsx')
+sample_email.to_excel('sample.xlsx', encoding = 'utf-8')
 mailbox.logout()
 
 ```
 <img width="550" alt="Screenshot 2024-09-01 at 4 46 45 PM" src="https://github.com/user-attachments/assets/b88d4003-26dd-40ab-bca9-d9286f4d8c35">  
 We got a 20 rows and 5 of each columns. 
+
+Open email.py file.
+
+```python
+import pandas as pd
+import spacy
+
+df = pd.read_excel("sample.xlsx")
+
+```
