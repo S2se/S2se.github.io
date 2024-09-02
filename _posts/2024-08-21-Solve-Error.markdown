@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Python] Solving encoding Error"
+title:  "[Error:Python] Solving encoding Error"
 date:   2024-08-21 21:03:36 +0900
 categories: Error
 ---
