@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Project] Feature Extraction"
+title:  "[Project] Feature Extraction: 1. Email"
 date:   2024-08-21 21:03:36 +0900
 categories: Python
 ---
@@ -66,12 +66,33 @@ mailbox.logout()
 <img width="550" alt="Screenshot 2024-09-01 at 4 46 45 PM" src="https://github.com/user-attachments/assets/b88d4003-26dd-40ab-bca9-d9286f4d8c35">  
 We got a 20 rows and 5 of each columns. 
 
-Open email.py file.
+Open email_extraction.py file.
 
 ```python
 import pandas as pd
 import spacy
+import re 
 
-df = pd.read_excel("sample.xlsx")
+df = pd.read_excel('sample.xlsx')
+if df['message'].isnull().any():
+    df['message'].fillna('', inplace=True)
+    
+nlp = spacy.load("en_core_web_sm")
+df['body'] = df['message'].astype(str)
+df['body'] = df['body'].apply(nlp)
+
+tokenized_sentence = [
+    [re.sub(r"[^가-힣a-zA-Z0-9]", "", token.text.lower())
+    for token in doc
+    if not token.is_stop]
+    for doc in df['body']
+    ]
+
+fianl_tokenized_sentence = [
+    [token for token in tokens if token]
+    for tokens in tokenized_sentence
+]
+
+print(fianl_tokenized_sentence)
 
 ```
