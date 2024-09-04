@@ -114,10 +114,22 @@ nlp2= spacy.load("ko_core_news_sm")
 df['body'] = df['message'].astype(str)
 df['body'] = df['body'].apply(nlp2)
 
-korean_sentence =[ [token for token in doc if token is not token.is_stop and token.tag_ == 'ncn' and token.text.isalpha()]
+korean_sentence =[ [token.text for token in doc if token is not token.is_stop and token.tag_ == 'ncn' and token.text.isalpha()]
     for doc in df['body']
 ]
 print(korean_sentence)
 ```
 Given Result is
 <img width="735" alt="result_after_spacy_korean" src="https://github.com/user-attachments/assets/c53ae870-e6dc-4aa7-9e87-b1a1a3ca89a3">
+
+**Let's count the number of words**
+```python
+from collections import Counter
+korean_words =[ [token.text for token in doc if token is not token.is_stop and token.tag_ == 'ncn' and token.text.isalpha()]
+    for doc in df['body']]
+
+count_words =[words for sublist in korean_words for words in sublist ]
+count_ =Counter(count_words)
+print(count_)
+```
+<img width="736" alt="Count_words" src="https://github.com/user-attachments/assets/a63256d3-38d4-4084-afba-db72077c52e9">
