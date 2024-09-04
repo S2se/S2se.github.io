@@ -169,5 +169,5 @@ connection.commit()
 cur.close()
 connection.close()
 ```
-Given result; Here is the Some of the results.
+Given result; Here is the Some of the results.  
 <img width="104" alt="Result" src="https://github.com/user-attachments/assets/19bb3bf9-4d44-4f5e-874f-b2de964beaa0">
