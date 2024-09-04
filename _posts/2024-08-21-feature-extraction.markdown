@@ -96,3 +96,28 @@ fianl_tokenized_sentence = [
 print(fianl_tokenized_sentence)
 
 ```
+#### But this model can not deal with Korean sentences.
+For solve this, need to set Korean Spacy model.
+
+Write down this code on your terminal.
+**_"**  
+### !python -m spacy download ko_core_news_sm
+**"_**  
+
+
+```python
+import pandas as pd
+import spacy
+
+df = pd.read_excel('sample.xlsx')
+nlp2= spacy.load("ko_core_news_sm")
+df['body'] = df['message'].astype(str)
+df['body'] = df['body'].apply(nlp2)
+
+korean_sentence =[ [token for token in doc if token is not token.is_stop and token.tag_ == 'ncn' and token.text.isalpha()]
+    for doc in df['body']
+]
+print(korean_sentence)
+```
+Given Result is
+<img width="735" alt="result_after_spacy_korean" src="https://github.com/user-attachments/assets/c53ae870-e6dc-4aa7-9e87-b1a1a3ca89a3">
