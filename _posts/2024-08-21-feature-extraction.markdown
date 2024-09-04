@@ -134,3 +134,40 @@ print(count_)
 ```
 <img width="739" alt="After_count" src="https://github.com/user-attachments/assets/872eb766-5162-4f4f-a192-0f7cea507c98">
 
+**Now save the dictionaries into PostgreSql**  
+Make the database
+```sql
+create database email_extraction;
+```
+Connect with Python
+```python
+import psycopg2
+connection = psycopg2.connect("host='localhost' dbname=email_extraction user=yourusername password=yourpassword port=5432")
+cur = connection.cursor()
+```
+Create table
+```python
+cur.execute("CREATE TABLE Number_for_words_email ( word TEXT PRIMARY KEY, count INTEGER);") 
+```
+Put the items into Number_for_words_email table from the list 'count_'
+```python
+for word, count in count_.items():
+    cur.execute(
+        "INSERT INTO Number_for_words_email (word, count) VALUES (%s, %s) ON CONFLICT (word) DO UPDATE SET count = EXCLUDED.count;",
+        (word, count)
+    )
+```
+Check the the table
+```python
+cur.execute("SELECT * FROM Number_for_words_email;")
+rows = cur.fetchall()
+
+for row in rows:
+    print(row)
+
+connection.commit()
+cur.close()
+conn.close()
+```
+Given result; Here is the Some of the results.
+<img width="104" alt="Result" src="https://github.com/user-attachments/assets/19bb3bf9-4d44-4f5e-874f-b2de964beaa0">
