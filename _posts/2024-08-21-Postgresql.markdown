@@ -14,7 +14,7 @@ categories: Postgresql
 ```
 If you install that in your mac, they initialize user name, password automatically.
 You can check that on the website.
-![postgre](https://postgresapp.com/)  
+[Here](https://postgresapp.com/)  
 <img width="535" alt="Mac_pass" src="https://github.com/user-attachments/assets/d564379d-f695-45de-be57-d5e2f7304702">
 
 **Now Let's connect postgreSql into python**
