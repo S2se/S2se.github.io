@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "[Spacy] Named Entity Recognition"
+date:   2024-09-04 19:03:36 +0900
+categories: Python
+---
+
+```python
+!python -m spacy download en_core_web_lg
+nlp = spacy.load('en_core_web_lg')
+```
