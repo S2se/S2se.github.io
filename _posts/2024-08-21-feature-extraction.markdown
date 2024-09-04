@@ -100,9 +100,9 @@ print(fianl_tokenized_sentence)
 For solve this, need to set Korean Spacy model.
 
 Write down this code on your terminal.  
-**_"**  
-### !python -m spacy download ko_core_news_sm
-**"_**  
+**_"_**  
+### _!python -m spacy download ko_core_news_sm_
+**_"_**  
 
 
 ```python
