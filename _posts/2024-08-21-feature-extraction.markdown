@@ -120,7 +120,7 @@ korean_sentence =[ [token.text for token in doc if token is not token.is_stop an
 print(korean_sentence)
 ```
 Given Result is
-<img width="735" alt="result_after_spacy_korean" src="https://github.com/user-attachments/assets/c53ae870-e6dc-4aa7-9e87-b1a1a3ca89a3">
+<img width="738" alt="Result_after_spacy" src="https://github.com/user-attachments/assets/b67733a7-f85c-4349-917f-d1d613cf19b8">
 
 **Let's count the number of words**
 ```python
@@ -132,4 +132,5 @@ count_words =[words for sublist in korean_words for words in sublist ]
 count_ =Counter(count_words)
 print(count_)
 ```
-<img width="736" alt="Count_words" src="https://github.com/user-attachments/assets/a63256d3-38d4-4084-afba-db72077c52e9">
+<img width="739" alt="After_count" src="https://github.com/user-attachments/assets/872eb766-5162-4f4f-a192-0f7cea507c98">
+
