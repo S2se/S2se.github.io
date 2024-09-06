@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Project] Feature Extraction: 2. Whirpool"
+title:  "[Project] Feature Extraction: 2. Whirlpool"
 date:   2024-08-21 21:03:36 +0900
 categories: Python
 ---
@@ -16,7 +16,7 @@ categories: Python
 3. To maintain their reputation as an innovation leader, Ericsson cannot afford to waste time on these outdated, manual approaches for feature extraction.  
 
 ### Approach 1
-1. Web crawling: Get the text from Whirpool website. 
+1. Web crawling: Get the text from Whirlpool website. 
 
 ```python
 import requests
@@ -28,6 +28,6 @@ response = requests.get(URL)
 soup = bs4.BeautifulSoup(response.text,"html.parser")
 ```
 
-However, Whirpool does not allow to access their source code.  
-<img width="1440" alt="Sourcecode_whirpool" src="https://github.com/user-attachments/assets/efb4007d-777b-4319-ae87-8887372dd209">
+However, Whirlpool does not allow to access their source code.  
+<img width="1440" alt="Sourcecode_whirlpool" src="https://github.com/user-attachments/assets/efb4007d-777b-4319-ae87-8887372dd209">
 
