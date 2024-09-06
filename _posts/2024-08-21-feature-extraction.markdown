@@ -6,6 +6,7 @@ categories: Python
 ---
 
 ## Description  
+## Feature Extraction1
 ### The problem   
 1. A consequence of a consistent strive to innovate on a large, multi-national scale, which results in a massive amount of data.​  
 
