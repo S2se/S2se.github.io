@@ -2,7 +2,7 @@
 layout: post
 title:  "[Mysql] Link with Java"
 date:   2024-08-21 21:03:36 +0900
-categories: Mysql,Java
+categories: Mysql Java
 ---
 
 ## Link between Mysql and Java
