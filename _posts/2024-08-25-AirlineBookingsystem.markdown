@@ -7,7 +7,8 @@ categories: Java
 
 ## Description
 1. Connect your Java with Mysql. You can check how to link is [here](https://s2se.github.io/posts/Mysql/)
-2. Check your connection 
+2. Check your connection  
+
 ```java
 import java.sql.Connection;
 import java. sql.DriverManager;
@@ -30,6 +31,6 @@ public class check_connec{
 	}
 }
 
-```
+```  
 If you got a message "success" then you can use mysql with Java. If not, please check your schema name and password.
 From url, after localhost:3306, you need to put your dbname. 
