@@ -2,7 +2,7 @@
 layout: post
 title:  "[Project] Analysis of Boston housing dataset"
 date:   2024-08-21 21:03:36 +0900
-categories: Python
+categories: [Project, Python]
 
 ---
 

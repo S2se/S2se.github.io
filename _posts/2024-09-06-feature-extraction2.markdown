@@ -2,7 +2,7 @@
 layout: post
 title:  "[Project] Feature Extraction: 2. Whirlpool"
 date:   2024-08-21 21:03:36 +0900
-categories: Python
+categories: [Project, Python]
 ---
 
 ## Description  
