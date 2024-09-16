@@ -197,9 +197,6 @@ print(result)
 
 
 
-If the values of MSE and RMSE closer to 0, it means better model performance.  
-
-
 
 
 ```python 

@@ -10,6 +10,12 @@ categories: [Project, Java]
 2. Check your connection  
 3. Make your table
 
+### For Improvement:
+
+1. Due to limited time with team members, a flawless implementation of the program was not achieved.
+2. The implementation of the member information database was not completed perfectly.
+3. Attempts to retrieve data from an actual website were unsuccessful.
+
 ```java
 package manage_db;
 
