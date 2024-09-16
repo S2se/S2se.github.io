@@ -184,4 +184,180 @@ public static void main(String[] args) {
 <img width="594" alt="Screenshot 2024-09-16 at 7 43 25 PM" src="https://github.com/user-attachments/assets/b32c7ceb-c726-4d9c-8376-92b6a40bb8e1">  
 
 
+## The code below is the second screen of this project.
++ Select the date
++ Shoow customer where they are traveling from and their destination. 
 
+
+```java
+package Book_seat;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.border.LineBorder;
+
+import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
+import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
+import net.sourceforge.jdatepicker.impl.UtilDateModel;
+import manage_db.*;
+
+public class SelectAirportK extends JFrame {
+
+	public UtilDateModel model, model2;
+	public JDatePanelImpl datepanel, datepanel2;
+	public JDatePickerImpl datePicker, datePicker2;
+	public JLabel incheon, perth;
+
+	public SelectAirportK() {
+		setSize(600, 850);
+		setTitle("packagetour_countryselect");
+		setLocationRelativeTo(null);
+
+		JPanel P = new JPanel();
+		P.setOpaque(true);
+		P.setLayout(new BorderLayout());
+		LineBorder b1 = new LineBorder(Color.BLACK, 5);
+		LineBorder b2 = new LineBorder(new Color(255, 255, 255), 5);
+		JPanel B = new JPanel();
+		JLabel Korea = new JLabel();
+
+		ImageIcon iconKorea = new ImageIcon("icon/Korea.png");
+		Korea.setIcon(iconKorea);
+		B.add(Korea);
+		P.add(B, BorderLayout.NORTH);
+
+		JPanel C = new JPanel();
+		C.setBorder(b2);
+
+		JButton[] select = new JButton[2];
+		select[0] = new JButton();
+		select[1] = new JButton();
+
+		ImageIcon oneway = new ImageIcon("icon/Oneway.png");
+		select[0].setIcon(oneway);
+		ImageIcon round = new ImageIcon("icon/Roundtrip.png");
+		select[1].setIcon(round);
+
+		for (int i = 0; i < 2; i++) {
+			select[i].setOpaque(true);
+			select[i].setBorderPainted(false); 
+			select[i].setBorderPainted(false);
+			select[i].setFocusPainted(false);
+			select[i].setContentAreaFilled(false);
+			C.add(select[i]);
+		}
+
+		ImageIcon[] start = { new ImageIcon("icon/Sydney.png") };
+		JList scrollList = new JList(start);
+		scrollList.setVisibleRowCount(1);
+		C.add(new JScrollPane(scrollList));
+
+		JButton change = new JButton();
+		ImageIcon ch = new ImageIcon("icon/Change.png");
+		change.setIcon(ch);
+		change.setBorderPainted(false);
+		change.setFocusPainted(false);
+		change.setContentAreaFilled(false);
+		C.add(change);
+
+		ImageIcon[] dest = { new ImageIcon("icon/Incheon.png") };
+		JList scrollList2 = new JList(dest);
+		scrollList2.setVisibleRowCount(1);
+		C.add(new JScrollPane(scrollList2));
+
+		JLabel go = new JLabel();
+		ImageIcon g = new ImageIcon("icon/Go.png");
+		go.setIcon(g);
+		model = new UtilDateModel();
+		datepanel = new JDatePanelImpl(model);
+		datePicker = new JDatePickerImpl(datepanel);
+		go.setText(model.getYear() + "-" + (model.getMonth() + 1) + "-" + model.getDay());
+
+		JLabel back = new JLabel();
+		ImageIcon b = new ImageIcon("icon/Back.png");
+		back.setIcon(b);
+		model2 = new UtilDateModel();
+		datepanel2 = new JDatePanelImpl(model2);
+		datePicker2 = new JDatePickerImpl(datepanel2);
+		back.setText(model2.getYear() + "-" + (model2.getMonth() + 1) + "-" + model2.getDay());
+
+		JButton search = new JButton();
+		ImageIcon airport = new ImageIcon("icon/Choose.png");
+		search.setIcon(airport);
+		search.setBorderPainted(false);
+		search.setFocusPainted(false);
+		search.setContentAreaFilled(false);
+		search.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new Seat();
+				setVisible(false);
+			}
+		});
+
+		C.add(go);
+		C.add(datePicker);
+		C.add(back);
+		C.add(datePicker2);
+
+		C.add(search);
+		P.add(C, BorderLayout.CENTER);
+
+		JPanel A = new JPanel();
+		A.setLayout(new GridLayout(1, 5));
+		JButton[] btn = new JButton[5];
+		btn[0] = new JButton();
+		btn[1] = new JButton();
+		btn[2] = new JButton();
+		btn[3] = new JButton();
+		btn[4] = new JButton();
+		ImageIcon icon1 = new ImageIcon("icon/Home.png");
+		btn[0].setIcon(icon1);
+		ImageIcon icon2 = new ImageIcon("icon/Airplane.png");
+		btn[1].setIcon(icon2);
+		ImageIcon icon3 = new ImageIcon("icon/Hotel.png");
+		btn[2].setIcon(icon3);
+		ImageIcon icon4 = new ImageIcon("icon/Coin.png");
+		btn[3].setIcon(icon4);
+		ImageIcon icon5 = new ImageIcon("icon/Person.png");
+		btn[4].setIcon(icon5);
+		for (int i = 0; i < btn.length; i++) {
+			btn[i].setOpaque(true);
+			btn[i].setBorderPainted(false);
+			btn[i].setBorderPainted(false);
+			btn[i].setFocusPainted(false);
+			btn[i].setContentAreaFilled(false);
+			A.add(btn[i]);
+		}
+
+		btn[1].addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new Seat();
+				setVisible(false); 
+			}
+		});
+
+		P.add(A, BorderLayout.SOUTH);
+		add(P);
+
+		setVisible(true);
+
+	}
+
+	public static void main(String[] args) {
+		SelectAirportK test = new SelectAirportK();
+	}
+}
+```
