@@ -58,8 +58,10 @@ public class bookingdb{
 ```  
 + This code is about connect with database and create the table. For deal with sql in java, you need to use try and catch.
 + What If you didn't get success, please check your schema name and password.  
-+ *The result of creating database. Successfully get this information*
++ *The result of creating database. Successfully get this information*  
+
 <img width="250" alt="Screenshot 2024-09-16 at 7 35 05 PM" src="https://github.com/user-attachments/assets/8a5a4dcf-e2f6-4638-95ea-7dbd1d3d37a2">  
+
 
 ## The code below is the first screen of this project.
 ```java
