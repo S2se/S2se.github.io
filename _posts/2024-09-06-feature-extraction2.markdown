@@ -49,4 +49,15 @@ print("Page - Full Text: %s" % page_sydob.text)
 Page - Full Text: The Sydney Observatory is a heritage-listed meteorological station, astronomical observatory, function venue, science museum, and education facility located on Observatory Hill at Upper Fort Street, in the inner city Sydney suburb of Millers Point in the City of Sydney local government area of New South Wales, Australia. It was designed by William Weaver (plans) and Alexander Dawson (supervision) and built from 1857 to 1859 by Charles Bingemann & Ebenezer Dewar. It is also known as The Sydney Observatory; Observatory; Fort Phillip; Windmill Hill; and Flagstaff Hill. It was added to the New South Wales State Heritage Register on 22 December 2000.
 The site was formerly a defence fort, semaphore station, time ball station, meteorological station, observatory and windmills. The site evolved from a fort built on 'Windmill Hill' in the early 19th century to an observatory within the following 100 years. It is now a working museum where evening visitors can observe the stars and planets through a modern 40-centimetre (16 in) Schmidt-Cassegrain telescope and an historic 29-centimetre (11 in) refractor telescope built in 1874, the oldest telescope in Australia in regular use. ...
 
+```python
+import wikipediaapi
 
+wiki = wikipediaapi.Wikipedia(user_agent='Example/1.0',language='en')
+page_sydob = wiki.page('Sydney Observatory')
+
+with open("sydney_observatory.txt", "w") as f:
+    f.write(page_sydob.text)
+```
+
+**After run this code, you can find the "sydney_observatory.txt" file inside of your folder.**  
+<img width="648" alt="Screenshot 2024-10-02 at 2 37 47 PM" src="https://github.com/user-attachments/assets/20915c3e-d87d-4102-8a80-cd2f87684b26">  
