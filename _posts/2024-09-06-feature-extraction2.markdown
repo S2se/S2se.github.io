@@ -98,8 +98,7 @@ for word in data:
         cleaned_data.append(word)
         
 print(cleaned_data)
-```
-
+```  
  ### Let's find the Keywords from this text
 
 1. Before counting the keywords from the text, we want to complete stemming. There are a few algorithm options we have:
