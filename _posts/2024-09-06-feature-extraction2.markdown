@@ -100,4 +100,44 @@ for word in data:
 print(cleaned_data)
 ```
 
- ### Let's find Keywords from this text
+ ### Let's find the Keywords from this text
+
+1. Before counting the keywords from the text, we want to complete stemming. There are a few algorithm options we have:
+    1) Porter Algorithm
+    2) Lancaster Stemmer 
+2. Stemming with two algorithms
+3. Comparing how the results differ
+
+
+```python
+from nltk.stem import PorterStemmer
+from nltk.stem import LancasterStemmer
+
+porter_stemmer = PorterStemmer()
+lancaster_stemmer = LancasterStemmer()
+
+cleaned_by_porter = []
+cleaned_by_lancaster = []
+
+for word in cleaned_data:
+    cleaned_by_porter.append(porter_stemmer.stem(word))
+
+for word in cleaned_data:
+    cleaned_by_lancaster.append(lancaster_stemmer.stem(word))
+```
+
+### Let's Count it!
+
+```python
+from collections import Counter
+result_counts_1 = Counter(cleaned_by_porter)
+print(result_counts_1)
+
+result_counts_2 = Counter(cleaned_by_lancaster)
+print(result_counts_2)
+```
+
+- The result of porter:  
+Counter({'observatori': 86, 'the': 64, 'sydney': 43, 'new': 30, 'time': 30, 'astronom': 29, '–': 27, 'site': 26, 'in': 24, 'fort': 23, 'govern': 23, 'work': 19, 'build': 18, 'first': 17, 'signal': 17
+- The result of lancaster
+Counter({'observ': 95, 'the': 65, 'sydney': 43, 'astronom': 37, 'govern': 30, 'new': 30, 'tim': 30, '–': 27, 'sit': 26, 'in': 25, 'fort': 23, 'stat': 20, 'work': 19, 'sign': 18, 'build': 18, 'first': 17
