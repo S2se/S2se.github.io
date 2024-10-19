@@ -61,3 +61,26 @@ with open("sydney_observatory.txt", "w") as f:
 
 **After run this code, you can find the "sydney_observatory.txt" file inside of your folder.**  
 <img width="648" alt="Screenshot 2024-10-02 at 2 37 47 PM" src="https://github.com/user-attachments/assets/20915c3e-d87d-4102-8a80-cd2f87684b26">  
+
+Now, Let's bring the text file
+```python
+from nltk.tokenize import word_tokenize
+
+f= open("sydney_observatory.txt", "r")
+data= f.read().split()
+print(data)
+
+f.close()
+```
+The result will be: 
+['The',
+ 'Sydney',
+ 'Observatory',
+ 'is',
+ 'a',
+ 'heritage-listed',
+ 'meteorological',
+ 'station,',
+ 'astronomical',
+ 'observatory,',
+ 'function', ]
