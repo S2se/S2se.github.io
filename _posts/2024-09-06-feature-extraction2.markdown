@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Project] Feature Extraction: 2. Whirlpool, WIKI"
+title:  "[Project] Feature Extraction: 2. WIKI"
 date:   2024-08-21 21:03:36 +0900
 categories: [Project, Python]
 ---
