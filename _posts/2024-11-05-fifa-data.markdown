@@ -13,7 +13,11 @@ categories: [PowerBI, Visualization]
 3. Assumption: This analysis can reveal whether younger teams tend to have stronger attack stats due to their agility and speed, while older teams may have higher overall ratings due to more experience.  
 
 
-#### Visualization  
-![fifa1](https://github.com/user-attachments/files/17626169/fifa.pdf)  
-The age group between 24 and 26 years old shows relatively higher attacking strength. However, a higher overall score does not necessarily correlate with a higher attack rating. Teams with strong attacking power tend to have overall scores ranging between 60 and 80.
+### Visualization
+![fifa1](https://github.com/user-attachments/files/17626169/fifa.pdf)
+### Analyzing a team' attacking strength by age
+The age group between 24 and 26 years old shows relatively higher attacking strength. However, a higher overall score does not necessarily correlate with a higher attack rating. Teams with strong attacking power tend to have overall scores ranging between 60 and 80.  
+
+![fifa2](https://github.com/user-attachments/files/17626648/fifa2.pdf)
+### Analyzing a team's passing performance by age
 
