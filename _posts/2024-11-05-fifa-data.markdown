@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "[Project] Feature Extraction: 2. WIKI"
-date:   2024-08-21 21:03:36 +0900
+title:  "[Visualization] Analyzing data for each FIFA team"
+date:   2024-11-04 21:03:36 +0900
 categories: [PowerBI, Visualization]
 ---
 
 ## Understanding Team Strategy in FIFA 
 ### Description  
 1. To analyze and understand a team's strategy in FIFA based on the data provided Kaggle.  
-[kaggle] https://www.kaggle.com/datasets/moradi/fifa-stats  
+[kaggle]https://www.kaggle.com/datasets/moradi/fifa-stats  
 2. Using Tool: PowerBI  
 3. Assumption: This analysis can reveal whether younger teams tend to have stronger attack stats due to their agility and speed, while older teams may have higher overall ratings due to more experience.  
 
