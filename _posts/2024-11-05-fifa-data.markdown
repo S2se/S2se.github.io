@@ -14,10 +14,10 @@ categories: [PowerBI, Visualization]
 
 
 ### Visualization
-<img width="1440" alt="Screenshot 2024-09-16 at 7 43 25 PM" src="https://github.com/user-attachments/files/17626169/fifa.pdf">
+<img width="1440" alt="fifa1" src="https://github.com/user-attachments/files/17626169/fifa.pdf">
 ### Analyzing a team' attacking strength by age
 The age group between 24 and 26 years old shows relatively higher attacking strength. However, a higher overall score does not necessarily correlate with a higher attack rating. Teams with strong attacking power tend to have overall scores ranging between 60 and 80.  
 
-<img width="1440" alt="Screenshot 2024-09-16 at 7 43 25 PM" src="https://github.com/user-attachments/files/17626648/fifa2.pdf">
+<img width="1440" alt="fifa2" src="https://github.com/user-attachments/files/17626648/fifa2.pdf">
 ### Analyzing a team's passing performance by age
 
