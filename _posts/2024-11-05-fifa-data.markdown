@@ -24,7 +24,7 @@ The age group between 24 and 26 years old shows relatively higher attacking stre
 ### Analyzing a team's passing performance by age  
 
 To build this graph, created this table to group the ages. Here is the code:  
-```python
+```PowerBI
 Age Group = 
 SWITCH(
     TRUE(),
@@ -32,7 +32,10 @@ SWITCH(
     'Table'[Whole team average age] >= 20 && 'Table'[Whole team average age] < 21, "20-21",
     'Table'[Whole team average age] >= 21 && 'Table'[Whole team average age] < 22, "21-22",
     'Table'[Whole team average age] >= 22 && 'Table'[Whole team average age] < 23, "22-23",
-    'Table'[Whole team average age] >= 23 && 'Table'[Whole team average age] < 24,"23-24",'Table'[Whole team average age] >= 24 && 'Table'[Whole team average age] < 25, "24-25",'Table'[Whole team average age] >= 25 && 'Table'[Whole team average age] < 26, "25-26","26+"
+    'Table'[Whole team average age] >= 23 && 'Table'[Whole team average age] < 24,"23-24",
+    'Table'[Whole team average age] >= 24 && 'Table'[Whole team average age] < 25, "24-25",
+    'Table'[Whole team average age] >= 25 && 'Table'[Whole team average age] < 26, "25-26",
+    "26+"
 )
 ```
 The result couldn't be obtained properly due to the data size being too large, so a **logarithmic scale** is being used instead. 
