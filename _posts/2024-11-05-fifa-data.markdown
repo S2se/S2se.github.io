@@ -38,7 +38,7 @@ SWITCH(
     "26+"
 )
 ```
-The result couldn't be obtained properly due to the data size being too large, so a **logarithmic scale** is being used instead. 
+The result couldn't be obtained properly due to the data size being too large, so a **logarithmic scale** is being used instead.  
 1) As the average age increases, players are more likely to engage in aggressive play.  
 2) Older players are also more inclined to play with greater structure, and they are less affected by external pressures or challenges during the game.  
 
