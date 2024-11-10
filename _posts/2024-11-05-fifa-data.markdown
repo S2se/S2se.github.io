@@ -20,5 +20,11 @@ categories: [PowerBI, Visualization]
 The age group between 24 and 26 years old shows relatively higher attacking strength. However, a higher overall score does not necessarily correlate with a higher attack rating. Teams with strong attacking power tend to have overall scores ranging between 60 and 80.  
 
 <img width="1440" alt="fifa2" src="https://github.com/user-attachments/assets/08ca48ba-f24b-49c5-a1b5-4e54b1e397c5">
-### Analyzing a team's passing performance by age
 
+### Analyzing a team's passing performance by age  
+
+The result couldn't be obtained properly due to the data size being too large, so a **logarithmic scale** is being used instead. 
+1) As the average age increases, players are more likely to engage in aggressive play.  
+2) Older players are also more inclined to play with greater structure, and they are less affected by external pressures or challenges during the game.  
+
+For example, Kylian Mbappé, who is ranked first in the FIFA rankings, was born in 1998. The second player, Rodri, was born in 1996.
