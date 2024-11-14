@@ -5,7 +5,9 @@ date:   2024-11-04 21:03:36 +0900
 categories: [PowerBI, Visualization]
 ---
 
-## Understanding Team Strategy in FIFA 
+## Understanding Team Strategy in FIFA  
+<img width="957" alt="Screenshot 2024-11-14 at 11 26 34 PM" src="https://github.com/user-attachments/assets/54a1b0af-77e2-4f51-8391-07117950a774">  
+
 ### Description  
 1. To analyze and understand a team's strategy in FIFA based on the data provided Kaggle.  
 [Dataset_from_Kaggle](https://www.kaggle.com/datasets/moradi/fifa-stats)  
