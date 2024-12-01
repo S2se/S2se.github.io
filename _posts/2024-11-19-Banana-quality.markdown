@@ -73,3 +73,22 @@ plt.show()
 
 <img width="779" alt="Screenshot 2024-11-27 at 10 48 27 PM" src="https://github.com/user-attachments/assets/7552d277-9c76-433a-b550-46f79c0ad872">  
 
+5. Get rid of outliers from quality_score  
+- Check the IQR and lower bound
+
+```python
+Q1 = bs['quality_score'].quantile(0.25)  
+Q3 = bs['quality_score'].quantile(0.75) 
+IQR = Q3 - Q1      
+
+lower_bound = Q1 - 1.5 * IQR
+print(lower_bound)
+
+```  
+lower_bound is 0.9499999999999995  
+
+```python
+bs_cleaned = bs[bs['quality_score'] > 0.95] 
+bs_cleaned.info()
+```  
+<img width="345" alt="Screenshot 2024-12-01 at 8 48 18 PM" src="https://github.com/user-attachments/assets/15e1ba68-0c9a-476e-a056-8b7c4a49f6d2">  
