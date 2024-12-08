@@ -73,22 +73,62 @@ plt.show()
 
 <img width="779" alt="Screenshot 2024-11-27 at 10 48 27 PM" src="https://github.com/user-attachments/assets/7552d277-9c76-433a-b550-46f79c0ad872">  
 
-5. Get rid of outliers from quality_score  
-- Check the IQR and lower bound
+5. Get rid of variables
+- Identify Unused Variables
+- Check for Redundancy
+
 
 ```python
-Q1 = bs['quality_score'].quantile(0.25)  
-Q3 = bs['quality_score'].quantile(0.75) 
-IQR = Q3 - Q1      
-
-lower_bound = Q1 - 1.5 * IQR
-print(lower_bound)
-
-```  
-lower_bound is 0.9499999999999995  
-
-```python
-bs_cleaned = bs[bs['quality_score'] > 0.95] 
+bs_cleaned = bs_cleaned.drop(columns = ['sample_id' ,'quality_score' ])
 bs_cleaned.info()
+```   
+
+<img width="344" alt="Screenshot 2024-12-08 at 11 17 18 PM" src="https://github.com/user-attachments/assets/b04671e3-7e9d-4ba4-b4d1-4a6c2002f980">  
+
+6. Adapt Random Forest classification  
+
+RandomForestClassifier : [sckit learn explanation](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)  
+
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+
+x = bs_cleaned.drop(columns=[ 'quality_category']) 
+y = bs_cleaned["quality_category"]
+
+x_train, x_test , y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+print(x_train.shape, x_test.shape, y_train.shape, y_test.shape)
 ```  
-<img width="345" alt="Screenshot 2024-12-01 at 8 48 18 PM" src="https://github.com/user-attachments/assets/15e1ba68-0c9a-476e-a056-8b7c4a49f6d2">  
+
+(799, 8) (200, 8) (799,) (200,)
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score 
+
+clf = RandomForestClassifier(n_estimators=100, max_depth=20,random_state=0)
+clf.fit(x_train,y_train)
+
+predict1 = clf.predict(x_test)
+print(accuracy_score(y_test,predict1))
+```
+Accuracy score is 0.86.  
+
+```python
+from sklearn.model_selection import cross_validate
+
+scores = cross_validate(
+    clf, x, y, cv=5, scoring=['accuracy', 'f1_weighted']
+)
+
+print("Accuracy score:", scores['test_accuracy'])
+print("F1-score :", scores['test_f1_weighted'])
+print("Average Accuracy score:", scores['test_accuracy'].mean())
+print("Average F1-score:", scores['test_f1_weighted'].mean())
+```
+
+7. Result 
+Accuracy score: [0.92       0.855      0.895      0.935      0.91959799]  
+F1-score : [0.90774265 0.84391891 0.88608024 0.92155348 0.91306533]  
+Average Accuracy score: 0.9049195979899498  
+Average F1-score: 0.8944721218848048  
