@@ -10,7 +10,8 @@ categories: [Project, Python]
 
 This project involves building a Random Forest Classifier to predict and evaluate high-quality bananas using the Banana Quality Dataset. Below is a detailed breakdown of the steps taken in the model development process, along with insights derived during the analysis.  
 - The dataset : [Dataset_from_Kaggle](https://www.kaggle.com/datasets/mrmars1010/banana-quality-dataset/data)  
-- Build a RandomForest Classifier  
+
+---  
 
 ```python
 import seaborn as sns
