@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "[Project] Analysis Banana Quality"
+title:  "[Project] Optimizing Banana Quality: A Predictive Model"
 date:   2024-11-19 14:03:36 +0900
 categories: [Project, Python]
 ---
 
 # Description  
-## A model for finding a high-quality bananas  
+## Optimizing Banana Quality: A Predictive Models  
+
+This project involves building a Random Forest Classifier to predict and evaluate high-quality bananas using the Banana Quality Dataset. Below is a detailed breakdown of the steps taken in the model development process, along with insights derived during the analysis.  
 - The dataset : [Dataset_from_Kaggle](https://www.kaggle.com/datasets/mrmars1010/banana-quality-dataset/data)  
 - Build a RandomForest Classifier  
 
@@ -17,10 +19,10 @@ sns.pairplot(bs_cleaned)
 
 <img width="782" alt="Screenshot 2024-12-10 at 3 26 38 PM" src="https://github.com/user-attachments/assets/9855bc5f-6735-485a-93de-18dcac802945">  
 
-This is evident that there is no discernible linear relationship between any variables.  
-The data exhibit non-linear relations between them.  
+The dataset contains various features related to banana quality, such as ripeness, sugar content, firmness, and environmental factors. 
+An initial exploration using scatter plots revealed non-linear relationships between variables, making Random Forests an appropriate choice due to their capability to handle such complexity.  
 
-### 1. Bring the dataset  
+### 1. Loading the dataset  
 
 ```python
 import pandas as pd
@@ -34,7 +36,7 @@ bs.head()
 
 <img width="987" alt="Screenshot 2024-11-20 at 10 27 59 PM" src="https://github.com/user-attachments/assets/8b90d448-55c6-4a40-9d84-3d379572afcb">  
 
-### 2. Deal with null values  
+### 2. Handling Missing values  
 
 ```python
 bs.isna().sum()
@@ -44,7 +46,7 @@ bs.info()
 <img width="216" alt="Screenshot 2024-11-20 at 10 29 01 PM" src="https://github.com/user-attachments/assets/4438997e-6404-45e9-bb7c-599fc388d7f5">  
 <img width="423" alt="Screenshot 2024-11-20 at 10 29 45 PM" src="https://github.com/user-attachments/assets/23bd75c8-10aa-45c8-8c86-6ebc04cc1920">  
 
-### 3. Replacing category values to numeric values  
+### 3. Encoding Categorical variables
 
 ```python
 from sklearn.preprocessing import LabelEncoder
@@ -55,7 +57,7 @@ bs['region'] = le.fit_transform(bs['region'])
 bs['quality_category'] = le.fit_transform(bs['quality_category'])
 ```  
 
-### 4. Get rid of variables
+### 4. Feature Selection
 - Identify Unused Variables
 - Check for Redundancy  
 
@@ -66,7 +68,7 @@ bs_cleaned.info()
 
 <img width="338" alt="Screenshot 2024-12-10 at 3 08 27 PM" src="https://github.com/user-attachments/assets/65a91a53-fe0a-4286-ac8e-44e0d8656fd7">  
 
-### 5. Check the outliers with boxplot  
+### 5. Outlier Detection
 
 ```python
 import seaborn as sns
@@ -88,10 +90,13 @@ plt.show()
 
 <img width="778" alt="Screenshot 2024-12-10 at 3 10 44 PM" src="https://github.com/user-attachments/assets/448f24b4-d477-4664-89df-f9293d081a26">   
 
-
-### 6. Adapt Random Forest classification  
+## Model Building  
+### 6. Random Forest classifier
 
 RandomForestClassifier : [sckit learn explanation](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)  
+
+A Random Forest Classifier was implemented to predict the quality_category of bananas. The dataset was split into training and testing sets with an 80:20 ratio.  
+
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -104,7 +109,9 @@ x_train, x_test , y_train, y_test = train_test_split(x, y, test_size=0.2, random
 print(x_train.shape, x_test.shape, y_train.shape, y_test.shape)
 ```  
 
-(800, 8) (200, 8) (800,) (200,)  
+**(800, 8) (200, 8) (800,) (200,)**  
+
+The model trained and evaluated as follows:  
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
@@ -116,8 +123,9 @@ clf.fit(x_train,y_train)
 predict1 = clf.predict(x_test)
 print(accuracy_score(y_test,predict1))
 ```
-Accuracy score is 0.895.  
+**- Accuracy score is 0.895.**  
 
+### 7. Corss validation Results
 ```python
 from sklearn.model_selection import cross_validate
 
@@ -131,7 +139,7 @@ print("Average Accuracy score:", scores['test_accuracy'].mean())
 print("Average F1-score:", scores['test_f1_weighted'].mean())
 ```
 
-### 7. Result 
+### 8. Result 
 Accuracy score: [0.925 0.89  0.875 0.935 0.895]  
 F1-score : [0.91546266 0.88079787 0.86371544 0.92769708 0.88211976]  
 Average Accuracy score: 0.9039999999999999  
