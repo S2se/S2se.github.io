@@ -9,7 +9,16 @@ categories: [Project, Python]
 ### A model for finding a high-quality bananas  
 - The dataset : [Dataset_from_Kaggle](https://www.kaggle.com/datasets/mrmars1010/banana-quality-dataset/data)  
 - Build a RandomForest Classifier  
-- 
+
+```python
+import seaborn as sns
+sns.pairplot(bs_cleaned)
+```  
+
+<img width="782" alt="Screenshot 2024-12-10 at 3 26 38 PM" src="https://github.com/user-attachments/assets/9855bc5f-6735-485a-93de-18dcac802945">  
+
+This is evident that there is no discernible linear relationship between any variables.  
+The data exhibit non-linear relations between them.  
 
 1. Bring the dataset  
 ```python
