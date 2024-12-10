@@ -7,7 +7,9 @@ categories: [Project, Python]
 
 ## Description  
 ### A model for finding a high-quality bananas  
-The dataset : [Dataset_from_Kaggle](https://www.kaggle.com/datasets/mrmars1010/banana-quality-dataset/data)  
+- The dataset : [Dataset_from_Kaggle](https://www.kaggle.com/datasets/mrmars1010/banana-quality-dataset/data)  
+- Build a RandomForest Classifier  
+- 
 
 1. Bring the dataset  
 ```python
@@ -32,6 +34,7 @@ bs.info()
 <img width="423" alt="Screenshot 2024-11-20 at 10 29 45 PM" src="https://github.com/user-attachments/assets/23bd75c8-10aa-45c8-8c86-6ebc04cc1920">  
 
 3. Replacing category values to numeric values  
+
 ```python
 from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
@@ -39,51 +42,42 @@ le = LabelEncoder()
 bs['variety'] = le.fit_transform(bs['variety'])
 bs['region'] = le.fit_transform(bs['region'])
 bs['quality_category'] = le.fit_transform(bs['quality_category'])
+```  
 
-bs = bs.drop(['ripeness_category'], axis = 1)
-bs = bs.drop(['tree_age_years'], axis = 1)
-bs = bs.drop(['altitude_m'], axis = 1)
-bs = bs.drop(['rainfall_mm'], axis = 1)
-bs = bs.drop(['harvest_date'], axis = 1)
+4. Get rid of variables
+- Identify Unused Variables
+- Check for Redundancy  
 
-bs.head()
-```
+```python
+bs_cleaned = bs.drop(columns = ['sample_id' ,'quality_score','ripeness_category', 'tree_age_years', 'altitude_m', 'rainfall_mm', 'harvest_date' ])
+bs_cleaned.info()
+```  
 
-<img width="947" alt="Screenshot 2024-11-20 at 10 30 54 PM" src="https://github.com/user-attachments/assets/287eb0e7-93f2-4bcc-80bb-c6ae09e73e25">  
+<img width="338" alt="Screenshot 2024-12-10 at 3 08 27 PM" src="https://github.com/user-attachments/assets/65a91a53-fe0a-4286-ac8e-44e0d8656fd7">  
 
-4. Check the outliers with boxplot  
+5. Check the outliers with boxplot  
 
 ```python
 import seaborn as sns
 
 col_bs = [
-    "quality_score", "ripeness_index", "sugar_content_brix",
+     "ripeness_index", "sugar_content_brix",
     "firmness_kgf", "length_cm", "weight_g", "soil_nitrogen_ppm"
 ]
 
 plt.figure(figsize=(14, 10))
 for i, col in enumerate( col_bs, 1):
     plt.subplot(3, 3, i)
-    sns.boxplot(y=bs[col], color="darkgreen")  
+    sns.boxplot(y=bs_cleaned[col], color="darkgreen")  
     plt.title(f"Boxplot of {col}")
 
 plt.tight_layout()
 plt.show()
 ```  
 
-<img width="779" alt="Screenshot 2024-11-27 at 10 48 27 PM" src="https://github.com/user-attachments/assets/7552d277-9c76-433a-b550-46f79c0ad872">  
 
-5. Get rid of variables
-- Identify Unused Variables
-- Check for Redundancy
+<img width="778" alt="Screenshot 2024-12-10 at 3 10 44 PM" src="https://github.com/user-attachments/assets/448f24b4-d477-4664-89df-f9293d081a26">   
 
-
-```python
-bs_cleaned = bs_cleaned.drop(columns = ['sample_id' ,'quality_score' ])
-bs_cleaned.info()
-```   
-
-<img width="344" alt="Screenshot 2024-12-08 at 11 17 18 PM" src="https://github.com/user-attachments/assets/b04671e3-7e9d-4ba4-b4d1-4a6c2002f980">  
 
 6. Adapt Random Forest classification  
 
@@ -100,7 +94,7 @@ x_train, x_test , y_train, y_test = train_test_split(x, y, test_size=0.2, random
 print(x_train.shape, x_test.shape, y_train.shape, y_test.shape)
 ```  
 
-(799, 8) (200, 8) (799,) (200,)
+(800, 8) (200, 8) (800,) (200,)
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
@@ -112,7 +106,7 @@ clf.fit(x_train,y_train)
 predict1 = clf.predict(x_test)
 print(accuracy_score(y_test,predict1))
 ```
-Accuracy score is 0.86.  
+Accuracy score is 0.895.  
 
 ```python
 from sklearn.model_selection import cross_validate
@@ -128,7 +122,7 @@ print("Average F1-score:", scores['test_f1_weighted'].mean())
 ```
 
 7. Result 
-Accuracy score: [0.92       0.855      0.895      0.935      0.91959799]  
-F1-score : [0.90774265 0.84391891 0.88608024 0.92155348 0.91306533]  
-Average Accuracy score: 0.9049195979899498  
-Average F1-score: 0.8944721218848048  
+Accuracy score: [0.925 0.89  0.875 0.935 0.895]  
+F1-score : [0.91546266 0.88079787 0.86371544 0.92769708 0.88211976]  
+Average Accuracy score: 0.9039999999999999  
+Average F1-score: 0.8939585619159265  
