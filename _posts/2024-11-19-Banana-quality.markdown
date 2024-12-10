@@ -21,6 +21,7 @@ This is evident that there is no discernible linear relationship between any var
 The data exhibit non-linear relations between them.  
 
 1. Bring the dataset  
+
 ```python
 import pandas as pd
 import sklearn
@@ -34,6 +35,7 @@ bs.head()
 <img width="987" alt="Screenshot 2024-11-20 at 10 27 59 PM" src="https://github.com/user-attachments/assets/8b90d448-55c6-4a40-9d84-3d379572afcb">  
 
 2. Deal with null values  
+
 ```python
 bs.isna().sum()
 bs.info()
