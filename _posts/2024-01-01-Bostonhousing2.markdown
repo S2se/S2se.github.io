@@ -79,5 +79,7 @@ plt.show()
 2. The higher the percentage of the lower-status population, the more rooms there are, and the higher the house prices.  
 
 <img width="1144" alt="Screenshot 2025-01-07 at 7 48 05 PM" src="https://github.com/user-attachments/assets/62e9c3d7-1f76-472b-a614-77604410d11d" />  
-Here's the correlation graph. As explained before, there's positive correlation between RM and MEDV. Also there's negative correlation between LSTAT and MEDV.  
+Here’s the correlation heatmap. As mentioned earlier, there is a positive correlation between RM and MEDV, while LSTAT and MEDV show a negative correlation.  
+
+
 
