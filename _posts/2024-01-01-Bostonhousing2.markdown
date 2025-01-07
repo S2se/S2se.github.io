@@ -37,6 +37,7 @@ plt.show()
 <img width="719" alt="Screenshot 2025-01-01 at 3 25 22 PM" src="https://github.com/user-attachments/assets/e96ecb9d-1574-41ab-afb1-a5b548421d94" />  
 
 As you can see, the variables that show outliers are CRIM (crime rate), ZN (proportion of residential land), and CHAS (whether the tract bounds the Charles River). Considering the environment of Boston, it is judged that the presence or absence of the Charles River boundary will not have a significant impact compared to the other variables, so the outlier is removed.  
+
 **Standard for Removing Outliers**   
 : Which outliers should be removed from the dataset?  
 1. Extreme Values: Remove outliers that are unreasonably large or small. For example, an age value of 300 would be considered an outlier and should be removed.  
