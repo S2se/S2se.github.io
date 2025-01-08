@@ -36,7 +36,7 @@ plt.show()
 
 <img width="719" alt="Screenshot 2025-01-01 at 3 25 22 PM" src="https://github.com/user-attachments/assets/e96ecb9d-1574-41ab-afb1-a5b548421d94" />  
 
-As you can see, the variables that show outliers are CRIM (crime rate), ZN (proportion of residential land), and CHAS (whether the tract bounds the Charles River). Considering the environment of Boston, it is judged that the presence or absence of the Charles River boundary will not have a significant impact compared to the other variables, so the outlier is removed.  
+As you can see, the variables that show outliers are CRIM (crime rate), ZN (proportion of residential land), RM(the number of rooms), B(Black people).  
 
 **Standard for Removing Outliers**   
 : Which outliers should be removed from the dataset?  
@@ -45,33 +45,6 @@ As you can see, the variables that show outliers are CRIM (crime rate), ZN (prop
 3. Reversibility: Consider keeping outliers for now, especially if you might want to bring them back later.  
 4. Threshold of Impact: When outliers make up more than 25% of the data, removal is generally not recommended, as they could represent meaningful variation.  
 
-```python
-q1 = ds['CHAS'].quantile(0.25)
-q3 = ds['CHAS'].quantile(0.75)
-IQR = q3 - q1
-lower_bound = q1 - 1.5*IQR
-upper_bound = q3 + 1.5*IQR
-ds_cleaned = ds[(ds['CHAS']>=lower_bound) & (ds['CHAS']<=upper_bound)]
-
-num_columns = len(ds_cleaned.columns)
-rows = (num_columns + 3) // 4  
-fig, axs = plt.subplots(rows, 4, figsize=(8, 2 * rows))  
-axs = axs.flatten()
-
-for i, column in enumerate(ds_cleaned.columns):
-    axs[i].hist(ds_cleaned[column].dropna(), bins=10, color='skyblue', edgecolor='black')
-    axs[i].set_title(column, fontsize=10)
-    axs[i].set_xlabel(column, fontsize=8)
-    axs[i].set_ylabel('Frequency', fontsize=8)
-    axs[i].grid(axis='y', linestyle='--', alpha=0.7)
-
-for j in range(i + 1, len(axs)):
-    axs[j].axis('off')
-    
-plt.tight_layout()
-plt.show()
-
-```
 
 <img width="527" alt="Screenshot 2025-01-01 at 3 30 43 PM" src="https://github.com/user-attachments/assets/d235b786-2370-48ec-8472-2a4d455abae3" />  
 
@@ -80,6 +53,19 @@ plt.show()
 
 <img width="1144" alt="Screenshot 2025-01-07 at 7 48 05 PM" src="https://github.com/user-attachments/assets/62e9c3d7-1f76-472b-a614-77604410d11d" />  
 Here’s the correlation heatmap. As mentioned earlier, there is a positive correlation between RM and MEDV, while LSTAT and MEDV show a negative correlation.  
+
+```python
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler() 
+scale_columns = ['CRIM', 'ZN', 'INDUS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT']
+ds[scale_columns] = scaler.fit_transform(ds[scale_columns])
+
+ds.head()
+```  
+
+<img width="963" alt="Screenshot 2025-01-08 at 2 51 14 PM" src="https://github.com/user-attachments/assets/23470305-537d-4756-8b5f-d5b79462b01b" />  
+
 
 
 
